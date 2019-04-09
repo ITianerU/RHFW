@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>搜索工作区域</title>
+</head>
+<body>
+    <form action="/pjob/paChong" method="get">
+        <table>
+            {{ form.as_table }}
+            {% csrf_token %}
+        </table>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

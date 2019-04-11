@@ -65,7 +65,7 @@ def laGou(position, city):
         districts = lagou_parse_json(rsp.text, districts)
         time.sleep(0.02)
 
-    pie = Pie("职位信息统计", "{}{}职位行政区分布".format(city, position), title_pos='center', width=1300)
+    pie = Pie("拉钩职位信息统计", "{}{}职位行政区分布".format(city, position), title_pos='center', width=1300)
     columns = districts.keys()
     data = districts.values()
     # 加入数据，设置坐标位置为【75，50】，上方的colums选项取消显示，显示label标签
@@ -119,7 +119,7 @@ def qianChengWuYou(position, city):
         html = etree.HTML(rsp.content)
         districts = qianChengWuYou_parse_html(html, districts)
         time.sleep(0.02)
-    pie = Pie("职位信息统计", "{}{}职位行政区分布".format(city, position), title_pos='center', width=1300)
+    pie = Pie("前程无忧职位信息统计", "{}{}职位行政区分布".format(city, position), title_pos='center', width=1300)
     columns = districts.keys()
     data = districts.values()
     # 加入数据，设置坐标位置为【75，50】，上方的colums选项取消显示，显示label标签
@@ -182,7 +182,7 @@ def zhiLian(position, city):
         rsp = requests.get(start_url, headers=headers, params=data)
         districts = zhiLian_parse_json(rsp.text, districts)
         time.sleep(0.02)
-    pie = Pie("职位信息统计", "{}{}职位行政区分布".format(city, position), title_pos='center', width=1300)
+    pie = Pie("智联职位信息统计", "{}{}职位行政区分布".format(city, position), title_pos='center', width=1300)
     columns = districts.keys()
     data = districts.values()
     # 加入数据，设置坐标位置为【75，50】，上方的colums选项取消显示，显示label标签
